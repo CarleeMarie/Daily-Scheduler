@@ -45,13 +45,15 @@ $(function () {
      var timeBlockHour = $(timeBlocks[i]).attr('id');
      console.log(timeBlockHour);
 
-    // hours[1]
-    //  if timeBlocks < dayjs().hour()
-    //  then set class to future css {background-color: green}
-    //  if timeBlocks = dayjs().hour()
-    //  then set class to present css {background-color: Red}
-    //  else set class to past css {background-color: gray}
+     if (timeBlocks < dayjs().hour()) {
+      set CSS class to gray
+    } else if (timeBlocks >= dayjs().hour()) {
+      set css class to red;
+    } else {
+      set css class to green;
     }
+    // hours[1]
+  
 
     
   //block by comparing the id to the current hour. HINTS: How can the id
