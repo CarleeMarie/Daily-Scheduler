@@ -1,5 +1,6 @@
 console.log("hello world");
 var saveButtonEl = $('.saveBtn');
+var saveButtonEl = $('.saveBtn');
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -81,6 +82,13 @@ dayjs().hour(); // gets current hour
       set css class to red;
     } else {
       set css class to green;
+
+     if (timeBlocks < dayjs().hour()) {
+      set CSS class to gray
+    } else if (timeBlocks >= dayjs().hour()) {
+      set css class to red;
+    } else {
+      set css class to green;
     }
     // hours[1]
 
@@ -96,6 +104,6 @@ dayjs().hour(); // gets current hour
   // attribute of each time-block be used to do this?
   
   // Adds code to display the current date in the header of the page.
-  var currentDate = dayjs().format("dddd, MMMM DD");
-  $("#currentDay").text(currentDate);
+  var currentDate = dayjs().format('dddd, MMMM DD');
+  $('#currentDay').text(currentDate);
 });
